@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Trance Induce</title>
+<meta charset="utf-8" />
+<style>
+canvas {border: 1px solid black;}
+</style>
+<script src="tranceinducer.js"></script>
+</head>
+<body>
+<h1>Trance Inducer</h1>
+<canvas width="600" height="400" id="tshirtCanvas">
+<p>Please upgrade your browser to use TweetShirt!</p>
+</canvas>
+<form>
+
+<p>
+<label for="playPause">Play/Pause</label>
+<select id="playPause">
+<option value="paused" selected="selected">Paused</option>
+<option value="play">Play</option>
+</select>
+</p>
+<p>
+<label for="gradient">Gradient</label>
+<select id="gradient">
+<option value="disabled" selected="selected">Disabled</option>
+<option value="enabled">Enabled</option>
+</select>
+</p>
+<p>
+<label for="squareSize">Square Size:</label>
+<select id="squareSize">
+<option value="1">1</option>
+<option value="3">3</option>
+<option value="5">5</option>
+<option value="10">10</option>
+<option value="20" selected="selected">20</option>
+<option value="35">35</option>
+<option value="60">60</option>
+</select>
+</p>
+<p>
+<label for="numberOfSquares">Number of squares:</label>
+<select id="numberOfSquares">
+<option value="500">500</option>
+<option value="1000">1000</option>
+<option value="3000">3000</option>
+<option value="5000" selected="selected">5000</option>
+<option value="10000">10000</option>
+</select>
+</p>
+<p>
+<label for="colourScheme">Colour Scheme</label>
+<select id="colourScheme">
+<option value="1" selected="selected">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+</select>
+</p>
+<p>
+<!--<input type="button" id="update" value="Update">-->
+</p>
+</form>
+</body>
+</html>
