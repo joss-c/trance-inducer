@@ -60,7 +60,11 @@ function previewHandler() {
 	var index = selectObj.selectedIndex;
 	var playPause = selectObj[index].value;
 	if (playPause == "play") {
-		for (var squares = 0; squares < (numberOfSquares == "500" ? 500 : numberOfSquares == "1000" ? "1000" : numberOfSquares == "3000" ? 3000 : numberOfSquares == "5000" ? 5000 : 10000); squares++) {
+		for (var squares = 0; squares < (numberOfSquares == "500" ? 500 :
+										 numberOfSquares == "1000" ? 1000 :
+										 numberOfSquares == "3000" ? 3000 :
+										 numberOfSquares == "5000" ? 5000 :
+										 10000); squares++) {
 			drawSquare(canvas, context);
 		}
 	}
@@ -90,11 +94,20 @@ function drawSquare(canvas, context) {
 	var colourScheme3 = "rgb("+lfo_1[arrayIndex+rndNum(0,3)]+", "+lfo_1[arrayIndex+rndNum(0,5)]+", "+lfo_2_saw[arrayIndex]+")";
 	var colourScheme4 = "rgb("+lfo_1[arrayIndex+rndNum(0,3)]+", "+lfo_2_saw_reversed[arrayIndex+rndNum(3,10)]+", "+lfo_2_saw[arrayIndex]+")";
 
-	var w = squareSize == "1" ? 1 : ((squareSize == "3" ? lfo_3_3 : squareSize == "5" ? lfo_3_5 : squareSize == "10" ? lfo_3_10 : squareSize == "20" ? lfo_3_20 : squareSize == "35" ? lfo_3_35 : lfo_3_60)[arrayIndex]);
+	var w = squareSize == "1" ? 1 : ((squareSize == "3" ? lfo_3_3 :
+									  squareSize == "5" ? lfo_3_5 :
+									  squareSize == "10" ? lfo_3_10 :
+									  squareSize == "20" ? lfo_3_20 :
+									  squareSize == "35" ? lfo_3_35 :
+									  lfo_3_60)[arrayIndex]);
+									  
 	var x = rndNum((gradient == "enabled" ? rndNum(0, canvas.width) : 0),canvas.width);
 	var y = Math.floor(Math.random() * canvas.height);
 	
-	context.fillStyle = (colourScheme == "1" ? colourScheme1 : colourScheme == "2" ? colourScheme2 : colourScheme == "3" ? colourScheme3 : colourScheme4);
+	context.fillStyle = (colourScheme == "1" ? colourScheme1 :
+						 colourScheme == "2" ? colourScheme2 :
+						 colourScheme == "3" ? colourScheme3 :
+						 colourScheme4);
 	context.fillRect(x, y, w, w);
 }
 
