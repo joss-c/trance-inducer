@@ -60,11 +60,7 @@ function previewHandler() {
 	var index = selectObj.selectedIndex;
 	var playPause = selectObj[index].value;
 	if (playPause == "play") {
-		for (var squares = 0; squares < (numberOfSquares == "500" ? 500 :
-										 numberOfSquares == "1000" ? 1000 :
-										 numberOfSquares == "3000" ? 3000 :
-										 numberOfSquares == "5000" ? 5000 :
-										 10000); squares++) {
+		for (var squares = 0; squares < numberOfSquares; squares++) {
 			drawSquare(canvas, context);
 		}
 	}
